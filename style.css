@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.wrapper .bg {
+  width: 60%;
+  height: 300px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.hero {
+  margin-left: -4.2em;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding: 2em 3em;
+  background-color: #fff;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.hero h2 {
+  font-size: 1.35em;
+  letter-spacing: 0.3px;
+  color: hsl(217, 19%, 35%);
+}
+
+.hero p {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  color: hsl(214, 17%, 51%);
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share .profile img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.share .profile {
+  display: flex;
+  align-items: center;
+}
+
+.share .profile .details h3 {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: hsl(217, 19%, 35%);
+  line-height: 1.8;
+}
+
+.details p {
+  color: hsl(214, 17%, 70%);
+}
+
+.share .share-btn {
+  padding: 1em;
+  background-color: hsl(210, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.share .btn {
+  position: relative;
+  top: -28px;
+  cursor: pointer;
+}
+
+.share-platforms {
+  position: relative;
+  padding: 1em 4em;
+  top: -68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: hsl(217, 19%, 35%);
+  width: 250px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.share-platforms-mobile {
+  display: none;
+}
+
+.share-platforms::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.share-platforms img {
+  cursor: pointer;
+}
+
+.share-platforms p {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: hsl(214, 17%, 70%);
+}
+
+.share-btn.active {
+  background: hsl(214, 17%, 60%);
+}
+
+.share .btn.active {
+  filter: grayscale(100%) brightness(0) invert(100%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .wrapper .bg {
+    width: auto;
+    height: auto;
+    border-radius: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .hero {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 2em 3em;
+    background-color: #fff;
+    border-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  .share {
+    margin-top: 28px;
+  }
+
+  .share-platforms {
+    display: none;
+  }
+
+  .share .btn {
+    top: -1px;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
